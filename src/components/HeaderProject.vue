@@ -1,8 +1,11 @@
 <template>
-  <div class="containerGrid">
-    <div class="my-class">My component {{ name }} {{ title }} </div>
-      <button @click="handleClick(2)" > click me!</button>
-      <input type="text" @input="handleChange">
+  <div class="container">
+    <div class="my-class">{{$t('MyComponent')}} {{ name }} {{ title }} </div>
+    <input type="text" @input="handleChange">
+    <!-- <img src="ruta" alt="gato"> -->
+    <input type="button" @click="handleClick(2)" value="click me!"  />
+    <pv-button :label= "$t('ClickMe')"  />
+      
 
   </div>
    
@@ -64,14 +67,22 @@
 }
 .container{
   display:flex;
-  flex-direction: row;
+  gap:10px;
+  flex-direction: column;
   align-items: center;
+  padding:10px;
+  border: #282828 solid;
+
 }
 
 .containerGrid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 10px;
+  padding: 10px;
+  border: #282828 solid;
 }
+
+
   
 </style>

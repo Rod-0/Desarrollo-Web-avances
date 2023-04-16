@@ -1,7 +1,6 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-import HeaderProject from '@/components/HeaderProject.vue'
+
 import ListComponent from './components/list-component.vue';
 </script>
 

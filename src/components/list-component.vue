@@ -1,11 +1,16 @@
 <template>
-    <div v-for="category in categories">  <!--directivas -->
+    <div class="grid">  <!--class=""-->
+        <div v-for="category in categories">  <!--directivas -->
         <HeaderProject :name=category.name  />
     </div>
+
+    </div>
+    
     
 </template>
 
 <script>
+
 import HeaderProject from './HeaderProject.vue';
 
     export default{
@@ -20,7 +25,7 @@ import HeaderProject from './HeaderProject.vue';
         beforeMount(){
             //invocando el supuesto api
 
-            this.categories=[{name:'nombre 1'},{name:'nombre 2'},{name:'nombre 3'}]
+            this.categories=[{name:'nombre 1'},{name:'nombre 2'},{name:'nombre 3'},{name:'nombre 4'}]
         }
     }
 
@@ -29,6 +34,10 @@ import HeaderProject from './HeaderProject.vue';
 
 <style scoped>
 
-
+.grid{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap: 10px;
+}
 
 </style>

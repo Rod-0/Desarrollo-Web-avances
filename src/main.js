@@ -1,22 +1,21 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import './assets/main.css'
-
-
 import PrimeVue from 'primevue/config';
 
-//theme
-import "primevue/resources/themes/lara-light-indigo/theme.css";     
-    
-//core
-import "primevue/resources/primevue.min.css";
+import "primevue/resources/themes/lara-light-indigo/theme.css";   //theme
+import "primevue/resources/primevue.min.css";  //core
+import "primeicons/primeicons.css";  //icons
+import { i18n } from '../src/locales/i18n';
 
-//icons
-import "primeicons/primeicons.css";
 import Button from 'primevue/button'
+
 
 const app =createApp(App);
 
-app.use(PrimeVue);
+
+app.use(i18n)
 app.component('pv-button',Button)
-createApp(App).mount('#app')
+app.use(PrimeVue);
+app.mount('#app')
+
