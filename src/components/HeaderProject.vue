@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="my-class">{{$t('MyComponent')}} {{ name }} {{ title }} </div>
+    <div class="my-class">{{$t('MyComponent')}} {{ name }} {{ username }} {{ title }} </div>
     <input type="text" @input="handleChange">
     <!-- <img src="ruta" alt="gato"> -->
     <input type="button" @click="handleClick(2)" value="click me!"  />
@@ -17,7 +17,7 @@
 <script>
   
   export default {
-      props:['name'], //parametros
+      props:['name','username'], //parametros
       name:"header",
       data() {
         return{title:'titulo 1'}  //propiedades internas (encapsular informacion)
