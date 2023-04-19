@@ -10,6 +10,8 @@ import "primeicons/primeicons.css";  //icons
 import { i18n } from '../src/locales/i18n';
 import Button from 'primevue/button';
 import InputText from 'primevue/inputtext';
+
+
 import router from './router'
 
 const app =createApp(App);
