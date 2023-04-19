@@ -60,7 +60,7 @@
   </script>
     
     
-  <style scoped>
+<style scoped>
  .socialMedia {
     margin-top: 50px;
     padding: 50px;
@@ -123,4 +123,4 @@
   
   
     
-  </style>
+</style>
