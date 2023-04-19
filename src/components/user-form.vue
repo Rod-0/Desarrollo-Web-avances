@@ -48,6 +48,9 @@ export default{
     flex-direction: column;
     background-color: beige;
     gap:10px;
+    width: 300px;
+    margin:0 auto;
+    margin-top: 150px;
 }
 
 </style>

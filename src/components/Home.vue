@@ -1,5 +1,5 @@
 <template>
-    <div>Home</div>
+    <div class="home">Home</div>
 </template>
     
 <script>
@@ -9,4 +9,8 @@
 </script>
     
 <style scoped>
+.home{
+    margin-top: 500px;
+}
+
 </style>
