@@ -38,6 +38,8 @@ import { userServices } from '../services/user-api-services';
 
         beforeMount(){
             //invocando el supuesto api
+
+            //get
             this.userService.getUser().then(({data})=>{
                 this.categories=data
             })

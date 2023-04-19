@@ -18,6 +18,8 @@ import ListComponent from './components/list-component.vue';
     <router-link to="/AddTutorial">Go to add Tutorial</router-link>
 
     <router-link to="/ListComponent">Go to list Component</router-link>
+
+    <router-link to="/Adduser">Go to Add User</router-link>
    
   </nav>
   <main>

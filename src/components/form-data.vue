@@ -16,7 +16,7 @@
                 this.id =this.$route.params.id;
                 console.log('getting id ',this.$route.params.id)
             }
-        }
+        } 
     }
 </script>
     
