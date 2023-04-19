@@ -2,7 +2,7 @@
   <div class="container">
     <div class="my-class">{{$t('MyComponent')}} {{ name }} {{ username }} {{ title }} </div>
     <input type="text" @input="handleChange">
-    <!-- <img src="ruta" alt="gato"> -->
+    <pv-inputText type="text" v-model="value" />
     <input type="button" @click="handleClick(2)" value="click me!"  />
     <pv-button :label= "$t('ClickMe')"  />
       
