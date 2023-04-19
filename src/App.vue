@@ -1,11 +1,12 @@
 <script setup>
-
+import footerComponent from './components/footer.vue';
 </script>
 
 <template>
 
   <header>
     <nav class="navbar">
+    
 
       <ul>
         <li>
@@ -35,20 +36,23 @@
   </main>
 
   <footer>
-    <div>Footer</div>
+    <footerComponent />
   </footer>
   
 </template>
 
 <style scoped>
-template{
-  margin:auto;
-}
 
-.navbar{
- 
-  width: 1500px;
+main{
+  margin:100px;
 }
+/* .navbar{
+  display:flex;
+  justify-content: space-between;
+  background-color: #333;
+  color:white;
+  max-width: 950px;
+} */
 
 .navbar ul{
   list-style-type: none;

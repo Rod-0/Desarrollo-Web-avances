@@ -44,13 +44,17 @@ export default{
 <style scoped>
 
 .my-form{
-    display:flex;
+    display: flex;
     flex-direction: column;
-    background-color: beige;
-    gap:10px;
-    width: 300px;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+    height: 100%;
+    width: 500px;
     margin:0 auto;
-    margin-top: 150px;
 }
+
 
 </style>
