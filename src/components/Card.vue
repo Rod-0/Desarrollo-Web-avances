@@ -1,12 +1,12 @@
 <template>
 
 <pv-card>
-  <template #title>Card </template>
+  <template #title> {{ $t('CardAb') }} </template>
   <template #content>
    
     <div class="container">
     <div class="my-class"> Name: {{ name }} {{ official }} {{ currencies }} {{ capital }} {{ region }}
-      {{ subregion }} {{ lenguages }} {{ area }}{{ population }} </div>
+      {{ subregion }} {{ lenguages }} {{ area }}{{ population }}  </div>
       
 
   </div>
