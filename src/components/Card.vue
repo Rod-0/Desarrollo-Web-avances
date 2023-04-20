@@ -6,10 +6,14 @@
    
     <div class="container">
     <div class="my-class"> Name: {{ name }} {{ official }} {{ currencies }} {{ capital }} {{ region }}
-      {{ subregion }} {{ lenguages }} {{ area }}{{ population }}  </div>
+      {{ subregion }} {{ lenguages }} {{ area }}{{ population }} {{ flags }} </div>
       
 
   </div>
+
+  <pv-toast />
+  <pv-button label="Show" @click="show()" />
+
   </template>
  
    
@@ -24,7 +28,7 @@
 <script>
   
   export default {
-      props:['name','official','currencies','capital','region','subregion','lenguages','area','population'], //parametros
+      props:['name','official','currencies','capital','region','subregion','lenguages','area','population','flags'], //parametros
       name:"header",
       data() {
           //propiedades internas (encapsular informacion)

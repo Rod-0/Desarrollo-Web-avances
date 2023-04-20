@@ -3,7 +3,7 @@
         <div v-for="category in categories"> 
          <!--directivas -->
             <Card  :name=category.name :official=category.official :currencies=category.currencies :capital=category.capital 
-            :region=category.region :subregion=category.subregion  :lenguages=category.lenguages :area=category.area  :population=category.population />
+            :region=category.region :subregion=category.subregion  :lenguages=category.lenguages :area=category.area  :population=category.population :flags=category.flags />
            
             </div>
 
