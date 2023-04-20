@@ -1,25 +1,25 @@
 import axios from "axios";
 
 const http = axios.create({
-    baseURL:'https://jsonplaceholder.typicode.com/'
+    baseURL:'https://restcountries.com/v3.1/name/'
 })
 
 export class userServices{
     getUser=()=>{
 
-        return http.get('users')
+        return http.get('peru')
            
 
     };
     getUserbyId=(id)=>{
 
-        return http.get('users'+id);
+        return http.get('peru'+id);
 
     };
 
     postUser=(body)=>{
 
-        return http.post('users',body);
+        return http.post('peru',body);
 
     };
 
@@ -27,7 +27,7 @@ export class userServices{
 
         return axios({
             method: 'put',
-            url: 'users'+id,
+            url: 'peru'+id,
             data:body
             
           })
@@ -38,7 +38,7 @@ export class userServices{
 
         return axios({
             method: 'delete',
-            url: 'users'+id
+            url: 'peru'+id
             
             
           })

@@ -9,6 +9,9 @@ import "primevue/resources/primevue.min.css";  //core
 import "primeicons/primeicons.css";  //icons
 import { i18n } from '../src/locales/i18n';
 import Button from 'primevue/button';
+import Card from 'primevue/card';
+import Toolbar from 'primevue/toolbar';
+import SplitButton from 'primevue/splitbutton';
 import InputText from 'primevue/inputtext';
 
 
@@ -21,6 +24,8 @@ app.use(PrimeVue);
 app.use(router);
 app.component('pv-button',Button)
 app.component('pv-inputText',InputText)
-
+app.component('pv-card',Card)
+app.component('pv-toolBar',Toolbar)
+app.component('pv-splitButton',SplitButton)
 app.mount('#app')
 

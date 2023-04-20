@@ -1,38 +1,24 @@
 <template>
     <div class="socialMedia">
     <div class="column">
-        <p class="title">Healthy Pets</p>
-        <p>------------</p>
-        <img class="social" src="img/Twitter.png">
-        <img class="social" src="img/Face.png">
-        <img class="social" src="img/Whatsapp.png">
-    </div>
-    <div  class="column">
-        <div class="title">
-            <p>Company</p>
-        </div>
-        <div class="subtitle">
-            <p>About Us</p>
-            <p>Careers</p>
-            <p>Blog</p>
-            <p>Pricing</p>
-        </div>
+        <p class="title">Copyright © 2023 RESTCountries, inc All rights reserved</p>
+       
         
     </div>
     <div  class="column">
         <div class="title">
-            <p>Legal</p>
-
+            <p>Develop by</p>
         </div>
         <div class="subtitle">
-            
-            <p>Terms</p>
-            <p>Privacy</p>
+            <p>Rodrigo Pozo</p>
+            <p>u20181e187</p>
+           
         </div>
         
     </div>
+   
     <div  class="column">
-        <p class="title">Doubts? Leave us your mail</p>
+        <p class="title">To contact us</p>
         <div class="d41">
             <input type="text" placeholder="Your email adress">
             <button class="Sendmail">Submit</button>
