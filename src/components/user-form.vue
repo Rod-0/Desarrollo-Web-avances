@@ -4,8 +4,8 @@
         <pv-inputText v-model="name2" id="name" ></pv-inputText>
         <label for="username">Username:</label> 
         <pv-inputText v-model="username" id="username" ></pv-inputText> 
-        <label for="email">Email:</label> 
-        <pv-inputText v-model="email" id="email" ></pv-inputText> 
+        <label for="Additional">Additional information:</label> 
+        <pv-inputText v-model="Additional" id="Additional" ></pv-inputText> 
 
 
         <pv-button label="Save" @click="saveuser()" ></pv-button>
@@ -24,14 +24,14 @@ export default{
         return{
             name2:'',
             username:'',
-            email:'',
+            Additional:'',
             userService:new userServices()
         }
     },
 
     methods:{
         saveuser(){
-        const body={'name':this.name2,'username':this.username,'email':this.email}
+        const body={'name':this.name2,'username':this.username,'Additional':this.Additional}
         this.userService.postUser(body).then((response)=>{
             if(response.status==201){
                 alert('Created')
