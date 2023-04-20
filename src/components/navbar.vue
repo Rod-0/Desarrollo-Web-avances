@@ -5,14 +5,14 @@
 
       <ul>
         <li>
-          <router-link to="/" class="elements" >Inicio</router-link>
+          <router-link to="/" class="elements" >{{ $t('Inicio') }} </router-link>
         </li>
        
         <li>
-          <router-link to="/ListComponent" class="elements" >Go to list Component</router-link>
+          <router-link to="/ListComponent" class="elements" > {{ $t('Card') }} </router-link>
         </li>
         <li>
-          <router-link to="/Adduser" class="elements">Form</router-link>
+          <router-link to="/Adduser" class="elements">{{ $t('Form') }}  </router-link>
         </li>
       </ul>
 
@@ -20,8 +20,9 @@
 </nav>
 
 <pv-toolBar class="toolbar">
-    <p>About Peru</p>
+   
     <template #start>
+        <p> {{ $t('About') }} </p>
         <pv-button label="New" icon="pi pi-plus" class="mr-2" />
         <pv-button  label="Upload" icon="pi pi-upload" severity="success" />
         <i class="pi pi-bars p-toolbar-separator mr-2" />
@@ -91,8 +92,9 @@ export default {
   text-decoration: none;
 }
 
-.toolbar{
-    
+.toolbar p{
+    font-size: 35px;
+    margin:10px;
 }
 
 

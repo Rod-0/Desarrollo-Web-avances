@@ -5,7 +5,7 @@
   <template #content>
    
     <div class="container">
-    <div class="my-class">  {{ common }} {{ official }} {{ currencies }} {{ capital }} {{ region }}
+    <div class="my-class"> Name: {{ name }} {{ official }} {{ currencies }} {{ capital }} {{ region }}
       {{ subregion }} {{ lenguages }} {{ area }}{{ population }} </div>
       
 
@@ -24,7 +24,7 @@
 <script>
   
   export default {
-      props:['common','official','currencies','capital','region','subregion','lenguages','area','population'], //parametros
+      props:['name','official','currencies','capital','region','subregion','lenguages','area','population'], //parametros
       name:"header",
       data() {
           //propiedades internas (encapsular informacion)

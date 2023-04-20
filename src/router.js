@@ -8,7 +8,6 @@ import {createRouter,createWebHashHistory}    from 'vue-router'
 
 const routes = [
     {path:'/',component:ListComponent },
-    {path:'/AddTutorial/:id',component:FormData },
     {path:'/AddUser',component:UserForm },
     {path:'/ListComponent',component:ListComponent },
     {path:'/:cathAll(.*)',component:NotFound}

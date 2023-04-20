@@ -2,7 +2,7 @@
     <div class="grid">  
         <div v-for="category in categories"> 
          <!--directivas -->
-            <Card  :common=category.common :official=category.official :currencies=category.currencies :capital=category.capital 
+            <Card  :name=category.name :official=category.official :currencies=category.currencies :capital=category.capital 
             :region=category.region :subregion=category.subregion  :lenguages=category.lenguages :area=category.area  :population=category.population />
            
             </div>

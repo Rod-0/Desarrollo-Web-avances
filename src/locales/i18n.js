@@ -1,10 +1,10 @@
 import { createI18n } from 'vue-i18n';
 export const i18n=createI18n({
-    locale:'es',
+    locale:'en',
     messages:{
-        en:{"MyComponent":'My component', "ClickMe":'Click me'},
-        es:{"MyComponent":'Mi componente',"ClickMe":'Haz click'},
-        fr:{"MyComponent":'mon composant',"ClickMe":'Cliquez sur'}
+        en:{"Inicio":'Start',"Card":'Card',"Form":'Form',"About":'About Peru'},
+        es:{"Inicio":'inicio',"Card":'Carta',"Form":'Formulario',"About":'Sobre Peru'}
+      
     }
 })
 
