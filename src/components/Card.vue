@@ -6,7 +6,7 @@
    
     <div class="container">
     <div class="my-class"> Name: {{ name }} Official Name: {{ official }} Currencie: {{ currencies }} Capital: {{ capital }} Region: {{ region }}
-      Subregion: {{ subregion }} Languages: {{ lenguages }} Area: {{ area }} Population: {{ population }} Imagen: <img src={{ flags }}>  </div>
+      Subregion: {{ subregion }} Languages: {{ lenguages }} Area: {{ area }} Population: {{ population }} Imagen:  <img :src="( flags)">    </div>
       
 
   </div>
