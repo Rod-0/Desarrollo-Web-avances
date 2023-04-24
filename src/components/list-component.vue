@@ -2,8 +2,8 @@
     <div class="grid">  
         <div v-for="category in categories"> 
          <!--directivas -->
-            <Card  :name=category.name :official=category.official :currencies=category.currencies :capital=category.capital 
-            :region=category.region :subregion=category.subregion  :lenguages=category.lenguages :area=category.area  :population=category.population :flags=category.flags />
+            <Card  :name=category.name.common :official=category.name.official :currencies=category.currencies.PEN.name :capital=category.capital
+            :region=category.region :subregion=category.subregion  :lenguages=category.languages.aym  :area=category.area  :population=category.population :flags=category.flags.png />
            
             </div>
 
