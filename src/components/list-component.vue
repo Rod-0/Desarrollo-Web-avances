@@ -22,28 +22,33 @@ import { userServices } from '../services/user-api-services';
         components:{HeaderProject},
         data(){
             return {
-                categories:[],//se llena antes de ser renderizado en el before mount
+                categories:null,//se llena antes de ser renderizado en el before mount
                  userService: new userServices()
             }
         },
-       /*  methods:{
+        methods:{
             getAllUser:function(){
-                this.userService.getUser().then(function(response){
+                this.userService.getUser().then((response)=>{
                 console.log('response',response.data)
-                this.users=response.data
+                this.categories=response.data;
             });
 
             }
-        }, */
+
+            
+        }, 
 
         beforeMount(){
             //invocando el supuesto api
 
             //get
-            this.userService.getUser().then(({data})=>{
+           /*  this.userService.getUser().then(({data})=>{
                 this.categories=data
-            })
-            // this.getAllUser()
+            }) */
+
+
+
+            this.getAllUser();
 
             //single responsibility
             //this.categories=[{name:'nombre 1'},{name:'nombre 2'},{name:'nombre 3'},{name:'nombre 4'}]
