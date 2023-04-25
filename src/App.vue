@@ -1,39 +1,20 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
-
-import ListComponent from './components/list-component.vue';
+import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
   <header>
- <!--    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      
-    </div> -->
+      <HelloWorld msg="You did it!" />
+    </div>
   </header>
-  <nav>
-    <router-link to="/">Go to Home</router-link>
 
-    <router-link to="/AddTutorial">Go to add Tutorial</router-link>
-
-    <router-link to="/ListComponent">Go to list Component</router-link>
-
-    <router-link to="/Adduser">Go to Add User</router-link>
-   
-  </nav>
   <main>
-
-    <router-view />
-    
-    <!-- <ListComponent/> -->
-
-    
-
+    <TheWelcome />
   </main>
-  <footer>
-    <div>Footer</div>
-  </footer>
 </template>
 
 <style scoped>
