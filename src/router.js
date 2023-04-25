@@ -1,12 +1,12 @@
 import NotFound from "@/components/NotFound.component.vue";
 import Footer from "@/components/footer.component.vue";
-import CardComponent from "@/components/card.component.vue";
+import GetInformation from "@/components/getInfo.component.vue";
 
 import {createRouter,createWebHashHistory}    from 'vue-router'
 
 const routes = [
-    {path:'/',component:CardComponent },
-    {path:'/cardComponer',component:CardComponent },
+    {path:'/',component:GetInformation },
+    {path:'/GetInformation',component:GetInformation },
     {path:'/Footer',component:Footer },
     {path:'/:cathAll(.*)',component:NotFound}
     

@@ -9,7 +9,7 @@
         </li>
        
         <li>
-          <router-link to="/cardComponer" class="elements" > {{ $t('Card') }} </router-link>
+          <router-link to="/GetInformation" class="elements" > {{ $t('Card') }} </router-link>
         </li>
 
         <li>
