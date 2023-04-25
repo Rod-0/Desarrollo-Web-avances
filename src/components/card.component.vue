@@ -6,48 +6,65 @@
    
     <div class="container">
       <div class="elements"> 
-        <label for="name">Name:</label>
+        <label for="name">{{ $t('Name') }} :</label>
         <div id="name">{{ name }}</div>
       </div>
 
       <div class="elements"> 
-        <label for="oficialName">Official Name:</label>
+        <label for="oficialName">{{ $t('OfficialName') }}:</label>
         <div id="oficalName"> {{ official }}</div>
       </div>
 
       <div class="elements"> 
-        <label for="currencies"> Currencie:</label>
+        <label for="currencies"> {{ $t('Currencie') }}:</label>
         <div id="currencies">  {{ currencies }}</div>
       </div>
 
       <div class="elements"> 
-        <label for="capital"> Capital:</label>
+        <label for="capital"> {{ $t('Capital') }}:</label>
         <div id="capital">   {{ capital }}</div>
       </div>
 
       <div class="elements"> 
-        <label for="region"> Region:</label>
+        <label for="region"> {{ $t('Region') }}:</label>
         <div id="region">{{ region }}</div>
       </div>
 
       <div class="elements"> 
-        <label for="subRegion">Subregion: </label>
+        <label for="subRegion">{{ $t('SubRegion') }}: </label>
         <div id="subRegion">{{ subregion }}</div>
       </div>
 
       <div class="elements"> 
-        <label for="lenguages">Languages: </label>
+        <label for="lenguages">{{ $t('Languages') }}: </label>
         <div id="lenguages"> {{ lenguages }}</div>
       </div>
 
       <div class="elements"> 
-        <label for="area"> Area:  </label>
+        <label for="area"> {{ $t('Area') }}:  </label>
         <div id="area">{{ area }}</div>
       </div>
 
       <div class="elements"> 
-        <label for="population">  Population:  </label>
+        <label for="population">  {{ $t('Population') }}:  </label>
         <div id="population"> {{ population }} </div>
+      </div>
+
+
+      <div class="imagenes">
+        
+        <div class="flag">
+          <label for="peruFlag"> {{ $t('PeruFlag') }}:  </label>
+          <img :src="(flags)" id="peruFlag"> 
+         </div>
+
+         <div class="coatOfarms">
+          <label for="perucoat"> {{ $t('CoatOfArms') }}:  </label>
+          <img :src="(coatOfarms)" id="perucoat"> 
+         </div>
+        
+
+        
       </div>
 
       
@@ -56,7 +73,7 @@
 
 
          
-        Imagen:  <img :src="(flags)"> 
+       
       
 
   </div>
@@ -78,10 +95,10 @@
 <script>
   
   export default {
-      props:['name','official','currencies','capital','region','subregion','lenguages','area','population','flags'], //parametros
+      props:['name','official','currencies','capital','region','subregion','lenguages','area','population','flags','coatOfarms'], //parametros
       name:"header",
       data() {
-          //propiedades internas (encapsular informacion)
+          
 
       }
 
@@ -99,12 +116,43 @@
   display:flex;
   gap:10px;
   flex-direction: column;
-  align-items: center;
-  padding:10px;
-  border: #282828 solid;
+  border:black solid;
+  padding: 1rem;
+  
 
 }
 
+.elements label,.imagenes label{
+  font-weight: bold;
+}
+
+.elements div{
+  margin-left: 30px;
+}
+
+.elements{
+  display: flex;
+  font-size: 1.2rem;
+  padding: 8px;
+}
+
+.imagenes{
+  display: flex;
+  flex-direction:row;
+  font-size: 1.2rem;
+  padding: 8px;
+  gap:150px;
+
+}
+.imagenes label{
+  float:left;
+  font-weight: bold;
+}
+
+.imagenes img{
+  margin-left: 50px;
+  width: 300px;
+}
 
 
 
