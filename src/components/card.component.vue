@@ -67,19 +67,10 @@
         
       </div>
 
-      
-
-
-
-
-         
-       
-      
 
   </div>
+  <pv-button label="Click Me!" @click="Message($t('View'))"></pv-button>
 
-  <pv-toast />
-  <pv-button label="Show" @click="show()" />
 
   </template>
  
@@ -93,13 +84,23 @@
   
   
 <script>
+
+
+
   
   export default {
       props:['name','official','currencies','capital','region','subregion','lenguages','area','population','flags','coatOfarms'], //parametros
       name:"header",
       data() {
+
+        
           
 
+      },
+      methods:{
+        Message(v){
+          alert(v)
+        }
       }
 
       

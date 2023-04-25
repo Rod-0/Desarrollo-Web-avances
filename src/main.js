@@ -12,6 +12,7 @@ import Button from 'primevue/button';
 import Card from 'primevue/card';
 import Toolbar from 'primevue/toolbar';
 import SplitButton from 'primevue/splitbutton';
+import Toast from 'primevue/toast';
 import ToastService from 'primevue/toastservice';
 import InputText from 'primevue/inputtext';
 
@@ -29,6 +30,7 @@ app.component('pv-inputText',InputText)
 app.component('pv-card',Card)
 app.component('pv-toolBar',Toolbar)
 app.component('pv-splitButton',SplitButton)
+app.component('pv-toast',Toast)
 
 app.mount('#app')
 
