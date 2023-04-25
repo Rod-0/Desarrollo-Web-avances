@@ -72,6 +72,7 @@
   align-items: center;
   padding:10px;
   border: #282828 solid;
+  
 
 }
 

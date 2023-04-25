@@ -58,7 +58,9 @@ import { userServices } from '../services/user-api-services';
 .grid{
     display: grid;
     grid-template-columns:1fr 1fr;
-    grid-gap: 10px;
+    gap: 20px;
+    width: 350px;
+    
 }
 
 </style>
