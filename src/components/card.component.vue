@@ -16,7 +16,7 @@
 
 import Card from './Card.vue';
 
-import { userServices } from '../services/user-api-services';
+import { userServices } from '../services/user-api.services';
 
     export default{
 

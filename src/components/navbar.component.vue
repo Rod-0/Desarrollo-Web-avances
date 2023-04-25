@@ -26,16 +26,10 @@
     <template #start>
         <p> {{ $t('About') }} </p>
         <pv-button label="New" icon="pi pi-plus" class="mr-2" />
-        <pv-button  label="Upload" icon="pi pi-upload" severity="success" />
-        <i class="pi pi-bars p-toolbar-separator mr-2" />
-        <pv-splitButton label="Save" icon="pi pi-check" severity="warning"></pv-splitButton>
+        
     </template>
 
-    <template #end>
-        <pv-button  icon="pi pi-search" class="mr-2" />
-        <pv-button  icon="pi pi-calendar" severity="success" class="mr-2" />
-        <pv-button  icon="pi pi-times" severity="danger" />
-    </template>
+
 </pv-toolBar>
 
 </template>

@@ -1,9 +1,6 @@
-
-
-
-import NotFound from "@/components/NotFound.vue";
-import Footer from "@/components/footer.vue";
-import CardComponent from "@/components/card-component.vue";
+import NotFound from "@/components/NotFound.component.vue";
+import Footer from "@/components/footer.component.vue";
+import CardComponent from "@/components/card.component.vue";
 
 import {createRouter,createWebHashHistory}    from 'vue-router'
 
