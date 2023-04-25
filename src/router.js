@@ -1,15 +1,16 @@
-import Home from "@/components/Home.vue"
-import FormData from "@/components/form-data.vue";
-import ListComponent from "@/components/list-component.vue";
+
+
+
 import NotFound from "@/components/NotFound.vue";
-import UserForm from  "@/components/user-form.vue";
+import Footer from "@/components/footer.vue";
+import CardComponent from "@/components/card-component.vue";
 
 import {createRouter,createWebHashHistory}    from 'vue-router'
 
 const routes = [
-    {path:'/',component:ListComponent },
-    {path:'/AddUser',component:UserForm },
-    {path:'/ListComponent',component:ListComponent },
+    {path:'/',component:CardComponent },
+    {path:'/cardComponer',component:CardComponent },
+    {path:'/Footer',component:Footer },
     {path:'/:cathAll(.*)',component:NotFound}
     
 

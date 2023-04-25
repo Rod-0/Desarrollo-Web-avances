@@ -9,11 +9,13 @@
         </li>
        
         <li>
-          <router-link to="/ListComponent" class="elements" > {{ $t('Card') }} </router-link>
+          <router-link to="/cardComponer" class="elements" > {{ $t('Card') }} </router-link>
         </li>
+
         <li>
-          <router-link to="/Adduser" class="elements">{{ $t('Form') }}  </router-link>
+          <router-link to="/Footer" class="elements" > {{ $t('AboutUs') }} </router-link>
         </li>
+      
       </ul>
 
 

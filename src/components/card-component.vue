@@ -20,7 +20,7 @@ import { userServices } from '../services/user-api-services';
 
     export default{
 
-        name:"list-component",
+        name:"card-componer",
         components:{Card},
         data(){
             return {
