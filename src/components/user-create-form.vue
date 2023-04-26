@@ -4,14 +4,14 @@
         <pv-inputText v-model="name2" id="name" ></pv-inputText>
         <label for="username">Username:</label> 
         <pv-inputText v-model="username" id="username" ></pv-inputText> 
-        <pv-button label="Save" @click="saveuser()" ></pv-button>
+        <pv-button label="Save" @click="saveuser()" ></pv-button>}
 
     </div>
     
 </template>
     
 <script>
-import { userServices } from '../services/user-api-services';
+import { userServices } from '@/services/user-api-services';
 
 export default{
     name:"user-form",

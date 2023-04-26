@@ -13,7 +13,7 @@ export class userServices{
     };
     getUserbyId=(id)=>{
 
-        return http.get('users'+id);
+        return http.get('users/'+id);
 
     };
 
@@ -27,14 +27,14 @@ export class userServices{
 
         return axios({
             method: 'put',
-            url: 'users'+id,
+            url: 'users/'+id,
             data:body
             
           })
 
     };
 
-    deleteuser=(id)=>{
+    deleteUser=(id)=>{
 
         return axios({
             method: 'delete',
