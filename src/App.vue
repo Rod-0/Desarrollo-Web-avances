@@ -43,6 +43,13 @@ header {
   line-height: 1.5;
 }
 
+nav{
+    display : flex;
+    flex-direction:row;
+    grid-gap:10px;
+
+}
+
 .logo {
   display: block;
   margin: 0 auto 2rem;

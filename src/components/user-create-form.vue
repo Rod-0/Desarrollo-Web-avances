@@ -30,6 +30,7 @@ export default{
         this.userService.postUser(body).then((response)=>{
             if(response.status==201){
                 alert('Created')
+                this.$router.push('/')
             }
             else{
                 alert('error creating user')
