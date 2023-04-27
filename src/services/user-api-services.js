@@ -25,12 +25,7 @@ export class userServices{
 
     putUser=(body,id)=>{
 
-        return axios({
-            method: 'put',
-            url: 'users/'+id,
-            data:body
-            
-          })
+        return http.put('users/'+id,body)
 
     };
 

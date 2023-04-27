@@ -1,6 +1,6 @@
 <template>
     <div class="my-form">
-        <div>Edit User</div>
+        <div>Edit User {{ id }} </div>
         <label for="name2">Name :</label>
          <pv-inputText v-model="name2" id="name2"></pv-inputText>
         <label for="username">Username :</label>
@@ -24,8 +24,13 @@ export default {
     },
     methods:{
         editUser(){
+            //generar el body
 
-            const body ={ 'name':this.name2 ,'username': this.username}
+            const body ={ 'name2':this.name2 ,'username': this.username}
+
+            this.userService.putUser(body,this.id).then((response)=>{
+                console.log('response',response)
+            })
 
         }
     },

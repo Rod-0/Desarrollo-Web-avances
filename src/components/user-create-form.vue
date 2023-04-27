@@ -1,5 +1,6 @@
 <template>
     <div class="my-form">
+        <div>Create new user: </div>
         <label for="name">Name:</label>
         <pv-inputText v-model="name2" id="name" ></pv-inputText>
         <label for="username">Username:</label> 

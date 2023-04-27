@@ -19,19 +19,13 @@ import ListComponent from './components/list-component.vue';
 
     <router-link to="/ListComponent">Go to list Component</router-link>
 
-    <router-link to="/Adduser">Go to Add User</router-link>
+    <router-link to="/User">Go to Add User</router-link>
 
     <router-link to="/ListUser">Go to List User</router-link>
    
   </nav>
   <main>
-
     <router-view />
-    
-    <!-- <ListComponent/> -->
-
-    
-
   </main>
   <footer>
     <div>Footer</div>

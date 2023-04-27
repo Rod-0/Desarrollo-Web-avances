@@ -2,7 +2,7 @@
 
     <div v-for="user in users" class="container">
         <div>user {{user.id}}</div>
-        <router-link :to="{ name: 'user', params: { id: user.id}}">Edit</router-link>
+        <router-link :to="{ name: 'user', params: { id: user.id}}">Edit</router-link>  <!-- ruta dinamica, la ruta se llama user -->
         
     </div>
   
@@ -39,6 +39,7 @@ export default {
   .container{
       display: flex;
       flex-direction: row;
+      gap:10px;
   }
   
 </style>
