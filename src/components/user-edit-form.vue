@@ -29,7 +29,13 @@ export default {
             const body ={ 'name2':this.name2 ,'username': this.username}
 
             this.userService.putUser(body,this.id).then((response)=>{
-                console.log('response',response)
+                
+                if(response.status===200){
+                    alert("user updated")
+                }
+                else{
+                    alert("error updating user")
+                }
             })
 
         }
