@@ -3,7 +3,7 @@
     <div v-for="user in users" class="container">
         <div>user {{user.id}}</div>
         <router-link :to="{ name: 'user', params: { id: user.id}}">Edit</router-link>  <!-- ruta dinamica, la ruta se llama user -->
-        
+        <pv-button label="Eliminar" @click="deleteUser(user.id)" ></pv-button>
     </div>
   
 </template>
@@ -28,6 +28,16 @@ export default {
           window.sessionStorage.setItem("test4",4)
       },
       methods:{
+        deleteUser(id){
+            this.userService.deleteUser(id).then((response)=>{
+                if(response.status === 200){
+                    alert("user deleted");
+                }
+                else{
+                    alert("error deleting user");
+                }
+            })
+        },
           GetAll(){
               this.userService.getUser().then((response)=>{
                   console.log('response',response.data);

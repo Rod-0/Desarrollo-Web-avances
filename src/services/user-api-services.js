@@ -31,12 +31,7 @@ export class userServices{
 
     deleteUser=(id)=>{
 
-        return axios({
-            method: 'delete',
-            url: 'users'+id
-            
-            
-          })
+        return http.delete("users/"+id);
 
     };
 
