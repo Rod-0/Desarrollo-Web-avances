@@ -6,6 +6,7 @@ import {createRouter,createWebHashHistory}    from 'vue-router'
 import UserCreateForm from  "@/components/user-create-form.vue";
 import UserEditForm from "@/components/user-edit-form.vue";
 import ListUser from "@/components/user-list.vue";
+import Post from "@/components/posts.vue";
 
 
 const routes = [
@@ -15,6 +16,7 @@ const routes = [
     {path:'/User/:id',component:UserEditForm,name:'user', },
     {path:'/ListComponent',component:ListComponent },
     {path:'/ListUser',component:ListUser },
+    {path:'/Posts',component:Post },
     {path:'/:cathAll(.*)',component:NotFound}
     
 
