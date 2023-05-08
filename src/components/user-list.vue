@@ -22,6 +22,10 @@ export default {
       beforeMount() {
           console.log('getting')
           this.GetAll();
+          window.sessionStorage.setItem("test",1),
+          window.sessionStorage.setItem("test2",2),
+          window.sessionStorage.setItem("test3",3),
+          window.sessionStorage.setItem("test4",4)
       },
       methods:{
           GetAll(){
