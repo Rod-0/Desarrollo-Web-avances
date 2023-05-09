@@ -2,7 +2,10 @@ import axios from "axios";
 
 
 const http = axios.create({
-    baseURL:'https://jsonplaceholder.typicode.com/'
+    baseURL:'http://localhost:3000/660',
+    headers:{
+        Authorization:"Bearer "+ window.localStorage.getItem("jwt")
+    }
 })
 export class PostsApiService {
 

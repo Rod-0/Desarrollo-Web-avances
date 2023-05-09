@@ -1,27 +1,54 @@
 <template>
     <div class="posts">
         <div v-for="post in posts" >
-            user {{post.id}} {{post.title}}
-            <pv-button label="delete" @click="deletePost(post.id)" />
+            
+                <!-- <div v-if="(post.id)==2">
+                    post {{post.id}} User id: {{post.userId }} {{post.title}} 
+                  
+                    <pv-button label="delete" @click="deletePost(post.id)" />
+                </div -->> 
+            
+              
+            
+             post {{post.id}}  {{post.title}} {{ post.content }} 
+            <pv-button label="delete" @click="deletePost(post.id)"/>
+            
         </div>
+        <!-- <div v-for="comments in comment" >
+            <div v-if="(comments.postId)==2">
+                comment {{comments.name }} {{ comments.email }} {{ comments.postId }}
+            </div>
+           
+
+        </div> -->
+            
+
+        
     </div>
 </template>
 
 <script>
 import {PostsApiService} from "@/services/post-api-service";
+// import {CommentsApiService} from "@/services/comment-api-service";
 export default {
     name: "posts",
     data(){
         return{
             posts :[],
-            postService : new PostsApiService()
+            // comment:[],
+            postService : new PostsApiService(),
+            // commentservice:new CommentsApiService()
         }
     },
     methods:{
         getAll(){
             this.postService.getAll().then((response)=>{
                 this.posts = response.data;
+                
             })
+            /*this.commentservice.getAll().then((response)=>{
+                this.comment = response.data;
+            }) */
         },
         deletePost(id){
             this.postService.delete(id).then((response)=>{
@@ -36,8 +63,10 @@ export default {
         }
     },
     beforeMount() {
+        
         this.getAll()
-        //alert(window.localStorage.getItem("test") )
+        
+       
     }
 }
 </script>
@@ -46,6 +75,6 @@ export default {
 .posts{
     display:flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1px;
 }
 </style>
