@@ -10,7 +10,7 @@
             
               
             
-             post {{post.id}}  {{post.title}} {{ post.content }} 
+             post {{post.id}}  {{post.title}}  
             <pv-button label="delete" @click="deletePost(post.id)"/>
             
         </div>
@@ -36,7 +36,7 @@ export default {
         return{
             posts :[],
             // comment:[],
-            postService : new PostsApiService(),
+            postService : new PostsApiService()
             // commentservice:new CommentsApiService()
         }
     },
@@ -53,7 +53,7 @@ export default {
         deletePost(id){
             this.postService.delete(id).then((response)=>{
                 if(response.status === 200){
-                    alert("user deleted")
+                    alert("post deleted")
                     this.getAll()
                 }
                 else(
