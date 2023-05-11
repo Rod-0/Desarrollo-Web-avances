@@ -7,6 +7,7 @@ import UserCreateForm from  "@/components/user-create-form.vue";
 import UserEditForm from "@/components/user-edit-form.vue";
 import ListUser from "@/components/user-list.vue";
 import Post from "@/components/posts.vue";
+import createPost from "@/components/createPost-component.vue";
 
 
 const routes = [
@@ -17,6 +18,7 @@ const routes = [
     {path:'/ListComponent',component:ListComponent },
     {path:'/ListUser',component:ListUser },
     {path:'/Posts',component:Post },
+    {path:'/CreatePosts',component:createPost },
     {path:'/:cathAll(.*)',component:NotFound}
     
 

@@ -23,7 +23,9 @@ import ListComponent from './components/list-component.vue';
 
     <router-link to="/ListUser">Go to List User</router-link>
 
-    <router-link to="/Posts">Posts</router-link>
+    <router-link to="/Posts"> View Posts</router-link>
+
+    <router-link to="/CreatePosts"> Create Posts</router-link>
    
   </nav>
   <main>

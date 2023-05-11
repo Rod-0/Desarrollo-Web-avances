@@ -53,7 +53,7 @@ export default {
         deletePost(id){
             this.postService.delete(id).then((response)=>{
                 if(response.status === 200){
-                    alert("user deleted")
+                    alert("post deleted")
                     this.getAll()
                 }
                 else(
