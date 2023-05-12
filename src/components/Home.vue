@@ -1,16 +1,24 @@
 <template>
+    
 
-<pv-card>
-    <template #title> Avarage Performance </template>
-    <template #content>
-       <div> Volts {{ volts }}</div>
+        <pv-card>
+            <template #title> Avarage Performance </template>
+            <template #content>
+                <div v-for="values in value">  
+                    <div> Volts {{ values.volts }}</div>
 
-       <div> Watts {{ watts }}</div>
+                    <div> Watts {{ values.watts }}</div>
 
-       <div> HP {{ hp }}</div>
+                    <div> HP {{ values.hp }}</div>
 
-    </template>
-</pv-card>
+                </div>
+
+            </template>
+        </pv-card>
+          
+           
+
+
 
     
 
@@ -18,12 +26,33 @@
 
 <script>
 
-
+import { healthchecksServices } from '../services/health-checks-api.services';
 export default {
-  props:['volts','watts','hp'],
-  name: "Home",
+  
+  name: "home",
   data(){
+    return {
+        value:[],
+        healthService: new healthchecksServices()
+    }
       
+  },
+  beforeMount(){
+    this.getAll();
+  },
+
+  methods:{
+     getAll(){
+        this.healthService.getHealthchecks().then((response)=>{
+            console.log('response',response.data)
+            this.value=response.data;
+        })
+
+    },
+
+    getProm(){
+       
+    }
   }
   
 }

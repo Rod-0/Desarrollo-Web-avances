@@ -1,12 +1,13 @@
 import Home from '../src/components/Home.vue';
 import NotFound from "@/components/NotFound.vue";
+import HealthChecks from "@/components/Health-Checks.component.vue";
 import {createRouter,createWebHashHistory}    from 'vue-router'
 
 
 
 const routes = [
     {path:'/',component:Home },
-    // {path:'/AddTutorial/:id',component:FormData },
+    {path:'/HealthChecks',component:HealthChecks},
     {path:'/:cathAll(.*)',component:NotFound}
     
 
