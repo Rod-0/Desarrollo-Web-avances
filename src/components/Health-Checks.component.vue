@@ -6,16 +6,16 @@
     
     
     
-    <pv-datatable :value="checks" tableStyle="min-width: 50rem">
-        <pv-column field="id" header="Record Id"></pv-column>
-        <pv-column field="name" header="Treadmill Id"></pv-column>
-        <pv-column field="category" header="Serial Number"></pv-column>
-        <pv-column field="quantity" header="Center Name"></pv-column>
-        <pv-column field="quantity" header="Date"></pv-column>
-        <pv-column field="quantity" header="Time"></pv-column>
-        <pv-column field="quantity" header="Volts"></pv-column>
-        <pv-column field="quantity" header="Watts"></pv-column>
-        <pv-column field="quantity" header="HP"></pv-column>
+    <pv-datatable :value="checks"  paginator :rows="5" :rowsPerPageOptions="[5, 10, 20, 50]" tableStyle="min-width: 50rem">
+        <pv-column field="id" header="Record Id"  sortable style="width: 25%"></pv-column>
+        <pv-column field="treadmillId" header="Treadmill Id"  sortable style="width: 25%"></pv-column>
+        <pv-column field="category" header="Serial Number"  sortable style="width: 25%"></pv-column>
+        <pv-column field="quantity" header="Center Name"  sortable style="width: 25%"></pv-column>
+        <pv-column field="day" header="Date"  sortable style="width: 25%"></pv-column> 
+        <pv-column field="quantity" header="Time"  sortable style="width: 25%"></pv-column>
+        <pv-column field="volts" header="Volts"  sortable style="width: 25%"></pv-column>
+        <pv-column field="watts" header="Watts"  sortable style="width: 25%"></pv-column>
+        <pv-column field="hp" header="HP"  sortable style="width: 25%"></pv-column>
     </pv-datatable>
 
 
@@ -38,7 +38,7 @@ export default {
     this.healthService=new healthchecksServices();
   },
   mounted(){
-    this.healthService.getHealthchecks().then(data=>this.checks=data)
+    this.healthService.getChecks().then(data=>this.checks=data);
   }
 
 

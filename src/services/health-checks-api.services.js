@@ -5,6 +5,9 @@ const http = axios.create({
 })
 
 export class healthchecksServices{
+    getChecks(){
+        return http.get('health-checks').then(res=>res.data);
+    };
     
     getHealthchecks=()=>{
 
