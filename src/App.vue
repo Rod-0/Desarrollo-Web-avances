@@ -1,7 +1,5 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
 
-import ListComponent from './components/list-component.vue';
 </script>
 
 <template>

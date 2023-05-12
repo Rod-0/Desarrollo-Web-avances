@@ -1,24 +1,12 @@
-import Home from '../src/components/Home.vue'
-import FormData from "@/components/form-data.vue";
-import ListComponent from "@/components/list-component.vue";
+import Home from '../src/components/Home.vue';
 import NotFound from "@/components/NotFound.vue";
 import {createRouter,createWebHashHistory}    from 'vue-router'
-import UserCreateForm from  "@/components/user-create-form.vue";
-import UserEditForm from "@/components/user-edit-form.vue";
-import ListUser from "@/components/user-list.vue";
-import Post from "@/components/posts.vue";
-import createPost from "@/components/createPost-component.vue";
+
 
 
 const routes = [
     {path:'/',component:Home },
-    {path:'/AddTutorial/:id',component:FormData },
-    {path:'/User',component:UserCreateForm },
-    {path:'/User/:id',component:UserEditForm,name:'user', },
-    {path:'/ListComponent',component:ListComponent },
-    {path:'/ListUser',component:ListUser },
-    {path:'/Posts',component:Post },
-    {path:'/CreatePosts',component:createPost },
+    // {path:'/AddTutorial/:id',component:FormData },
     {path:'/:cathAll(.*)',component:NotFound}
     
 
