@@ -2,8 +2,8 @@
 
     <div class="form-user">
         <div class="input-control">
-          <label class="label-input">email : </label>
-          <pv-inputText v-model="email"></pv-inputText>
+          <label class="label-input">Username : </label>
+          <pv-inputText v-model="username"></pv-inputText>
         </div>
         <p/>
         <div  class="input-control">
@@ -11,7 +11,11 @@
           <pv-inputText  v-model="password"></pv-inputText>
         </div>
         <p/>
-        <pv-button label="login" @click="loginUser()" />
+        <div class="buttons">
+            <pv-button label="login" @click="loginUser()" />
+            <pv-button label="logOut" @click="logOut()" />
+        </div>
+        
     </div>
 
 </template>
@@ -23,7 +27,7 @@ export default {
   name: "Home",
   data(){
       return{
-          email:'',
+          username:'',
           password:'',
           userService :new userServices()
       }
@@ -32,19 +36,27 @@ export default {
       loginUser(){
 
           const body ={
-              email:this.email,
+              username:this.username,
               password : this.password
           }
 
           this.userService.login(body).then((response)=>{
                 console.log(response.data.accessToken)
-                window.localStorage.setItem('jwt',response.data.accessToken)
+                window.localStorage.setItem('jwt',response.data)
+                //this.$router.push('/Posts')
+                
               
 
 
           })
 
        console.log('login')
+      },
+      logOut(){
+        window.localStorage.removeItem('jwt')
+      
+        location.reload()
+
       }
   }
 }
@@ -53,6 +65,12 @@ export default {
 <style scoped>
 .form-user{
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 150px;
+    
 }
 .label-input{
     width: 150px;

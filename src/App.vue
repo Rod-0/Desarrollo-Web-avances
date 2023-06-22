@@ -11,23 +11,24 @@ import ListComponent from './components/list-component.vue';
     <div class="wrapper">
       
     </div> -->
-  </header>
-  <nav>
-    <router-link to="/">Go to Home</router-link>
+    <nav>
+    <router-link to="/"> Home</router-link>
 
-    <router-link to="/AddTutorial">Go to add Tutorial</router-link>
+    <router-link to="/AddTutorial">add Tutorial</router-link>
 
-    <router-link to="/ListComponent">Go to list Component</router-link>
+    <router-link to="/ListComponent">list Component</router-link>
 
-    <router-link to="/User">Go to Add User</router-link>
+    <router-link to="/User">Add User</router-link>
 
-    <router-link to="/ListUser">Go to List User</router-link>
+    <router-link to="/ListUser">List User</router-link>
 
     <router-link to="/Posts"> View Posts</router-link>
 
     <router-link to="/CreatePosts"> Create Posts</router-link>
    
   </nav>
+  </header>
+
   <main>
     <router-view />
   </main>
@@ -37,9 +38,6 @@ import ListComponent from './components/list-component.vue';
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
 
 nav{
     display : flex;
@@ -48,26 +46,4 @@ nav{
 
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>

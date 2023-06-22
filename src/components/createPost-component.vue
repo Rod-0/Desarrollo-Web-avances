@@ -3,8 +3,10 @@
         <div>Create new post: </div>
         <label for="title">Title:</label>
         <pv-inputText v-model="title" id="title" ></pv-inputText>
-        <label for="content">Content:</label> 
-        <pv-inputText v-model="content" id="content" ></pv-inputText> 
+        <label for="content">Author:</label> 
+        <pv-inputText v-model="author" id="author" ></pv-inputText> 
+        <label for="content">User id:</label> 
+        <pv-inputNumber v-model="userId" id="userId" ></pv-inputNumber> 
         <pv-button label="Save" @click="saveuser()" ></pv-button>}
 
     </div>
@@ -20,18 +22,18 @@ export default{
         
         return{
             title:'',
-            ccontent:'',
+            author:'',
             postService:new PostsApiService()
         }
     },
 
     methods:{
         saveuser(){
-        const body={'title':this.title,'content':this.content}
+        const body={'title':this.title,'author':this.author,'userId':this.userId}
         this.postService.createPost(body).then((response)=>{
             if(response.status==201){
                 alert('Created')
-                // this.$router.push('/')
+                //this.$router.push('/Post')
             }
             else{
                 alert('error creating user')

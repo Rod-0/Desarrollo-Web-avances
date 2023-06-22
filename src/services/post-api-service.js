@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const http = axios.create({
-    baseURL:'http://localhost:3000/660',
+    baseURL:'http://localhost:5001/api/',
     headers:{
         Authorization:"Bearer "+ window.localStorage.getItem("jwt")
     }
@@ -10,14 +10,14 @@ const http = axios.create({
 export class PostsApiService {
 
     getAll() {
-        return http.get('posts')
+        return http.get('Post')
     }
 
     getPostById(id){
-        return http.get('posts/'+id)
+        return http.get('Post?userId='+id)
     };
     createPost(body){
-        return http.post('posts',body)
+        return http.post('Post',body)
     }
 
     udapte(id,body){

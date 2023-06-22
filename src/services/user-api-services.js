@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const http = axios.create({
-    baseURL:'http://localhost:3000/login'
+    baseURL:'http://localhost:5001/api/User'
 })
 
 export class userServices{

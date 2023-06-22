@@ -6,12 +6,13 @@
                     post {{post.id}} User id: {{post.userId }} {{post.title}} 
                   
                     <pv-button label="delete" @click="deletePost(post.id)" />
-                </div -->> 
+                </div -->
             
               
             
-             post {{post.id}}  {{post.title}} {{ post.content }} 
-            <pv-button label="delete" @click="deletePost(post.id)"/>
+              
+             <pv-button label="Get" @click="GetPost(post.userId)"/> 
+             <pv-button label="delete" @click="deletePost(post.id)"/>
             
         </div>
         <!-- <div v-for="comments in comment" >
@@ -35,15 +36,17 @@ export default {
     data(){
         return{
             posts :[],
+      
             // comment:[],
-            postService : new PostsApiService(),
+            postService : new PostsApiService()
             // commentservice:new CommentsApiService()
         }
     },
     methods:{
-        getAll(){
-            this.postService.getAll().then((response)=>{
+        GetPost(id){
+            this.postService.getPostById(id).then((response)=>{
                 this.posts = response.data;
+               
                 
             })
             /*this.commentservice.getAll().then((response)=>{
@@ -61,13 +64,8 @@ export default {
                 )
             })
         }
-    },
-    beforeMount() {
-        
-        this.getAll()
-        
-       
     }
+    
 }
 </script>
 

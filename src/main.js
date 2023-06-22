@@ -10,6 +10,7 @@ import "primeicons/primeicons.css";  //icons
 import { i18n } from '../src/locales/i18n';
 import Button from 'primevue/button';
 import InputText from 'primevue/inputtext';
+import InputNumber from 'primevue/inputnumber';
 import router from './router'
 
 const app =createApp(App);
@@ -19,6 +20,6 @@ app.use(PrimeVue);
 app.use(router);
 app.component('pv-button',Button)
 app.component('pv-inputText',InputText)
-
+app.component('pv-inputNumber',InputNumber)
 app.mount('#app')
 
